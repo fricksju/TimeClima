@@ -15,7 +15,7 @@ export class ClimaComponent implements OnInit {
   ngOnInit() {
   }
 
-  navegarParaTeladePesquisa() {
+  navegarParaTelaDePesquisa() {
     this.navegador.navigate(['/pesquisa']);
   }
 
