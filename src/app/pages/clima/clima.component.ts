@@ -1,10 +1,23 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { RouteConfigLoadEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-clima',
-  imports: [],
   templateUrl: './clima.component.html',
-  styleUrl: './clima.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrls: ['./clima.component.scss']
 })
-export class ClimaComponent { }
+export class ClimaComponent implements OnInit {
+
+  navegador = inject(Router);
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  navegarParaTeladePesquisa() {
+    this.navegador.navigate(['/pesquisa']);
+  }
+
+
+}
