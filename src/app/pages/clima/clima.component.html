@@ -2,7 +2,8 @@
   
 <div class="card">
   <h1 class="city">{{ dadosClima()?.name }}</h1>
-
+  <div class="temp">{{ dadosClima()?.main?.temp | number: '1.0-0'}}°C</div>
+ 
   <p>Exibindo informações do clima atual.</p>
   <button (click)="navegarParaTelaDePesquisa()">Pesquisar</button>
   </div>
