@@ -17,3 +17,4 @@ export interface Main{
     temp_max: number;
     
 }
+

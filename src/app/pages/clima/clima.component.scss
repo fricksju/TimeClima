@@ -2,7 +2,7 @@
     position: fixed;
     inset: 0;
     display: block;
-    background: url('https://picsum.photos/1920/1080') no-repeat center/cover;
+    background: url('https://picsum.photos/800/600') no-repeat center/cover;
 
 
     .clima-container {
@@ -43,6 +43,7 @@
                 padding: 12px;
                 border-radius: 8px;
                 border: none;
+                background: linear-gradient(135deg, #f9ed69 0%, #f08a5d 100%);
         }
       }
     }
