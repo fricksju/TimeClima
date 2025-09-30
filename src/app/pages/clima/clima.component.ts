@@ -3,6 +3,7 @@ import { RouteConfigLoadEnd, Router } from '@angular/router';
 import { OpenWeatherService } from '../../service/open-weather.service';
 import { Weather, WeatherResponse } from '../../models/weather-response.model';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { catchError, of, OperatorFunction } from 'rxjs';
 
 @Component({
   selector: 'app-clima',
@@ -14,7 +15,14 @@ export class ClimaComponent  {
   navegador = inject(Router);
   openWeatherService = inject(OpenWeatherService);
   dadosClima = toSignal<WeatherResponse | null>(
-    this.openWeatherService.buscarInfoClimaCidadeAtual(),
+    this.openWeatherService.buscarInfoClimaCidadeAtual()
+    .pipe(
+      catchError( err => {
+        console.error('Erro ao buscar dados do clima:', err);
+        return of(null)
+      })
+    ),
+    { initialValue: null }
   );
 
   constructor() { }
@@ -22,4 +30,8 @@ export class ClimaComponent  {
   navegarParaTelaDePesquisa() {
     this.navegador.navigate(['/pesquisa']);
   }
+}
+
+function pipe(arg0: OperatorFunction<unknown, unknown>): NoInfer<import("@angular/core/rxjs-interop").ToSignalOptions<WeatherResponse | null | undefined>> & { initialValue?: undefined; requireSync?: false; } {
+  throw new Error('Function not implemented.');
 }
