@@ -63,7 +63,7 @@
         .temp {
             font-size: 3.25rem;
             font-weight: 700;
-            color: #000000;
+            color: #ffffff;
             text-align: center;
             margin: 4px 0 8px;
             line-height: 1;
@@ -87,6 +87,14 @@
         .icon {
             width: 52px;
             height: 52px;
+        }
+
+        .minmax{
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.76)
         }
     }
 }
