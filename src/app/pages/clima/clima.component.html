@@ -11,10 +11,13 @@
 
         <img class="icon" [src]="'https://openweathermap.org/img/wn/' + clima.icon + '@2x.png'">
         <p class="desc">{{ clima.description | titlecase}}</p>
-
+        <div class="minmax">
+          <span class="min">{{ dadosClima()?.main?.temp_min | number: '1.0-0' }}°C</span>
+          <span class="max">{{ dadosClima()?.main?.temp_max | number: '1.0-0' }}°C</span>
+        </div>
       </div>
       <button (click)="navegarParaTelaDePesquisa()">Pesquisar</button>
-      
+
     } @else {
       <div class="img-titulo">
         <p class="desc">Carregando...</p>
