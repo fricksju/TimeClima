@@ -1,13 +1,16 @@
 <div class="clima-container">
-  
-<div class="card">
-  <h1 class="city">{{ dadosClima()?.name }}</h1>
-  <div class="temp">{{ dadosClima()?.main?.temp | number: '1.0-0'}}°C</div>
-  @if (dadosClima()) {
-    <p class="desc">{{ dadosClima()!.weather[0]?.description | titlecase }}</p>
-  }
 
-  <p>Exibindo informações do clima atual.</p>
-  <button (click)="navegarParaTelaDePesquisa()">Pesquisar</button>
-  </div>
+  <div class="card">  
+    <h1 class="city">{{ dadosClima()?.name}}</h1>
+
+    <div class="temp">{{ dadosClima()?.main?.temp | number: '1.0-0' }}°C</div>
+
+    @if (dadosClima()){
+      @let clima =  dadosClima()!.weather[0];
+
+      <img class="icon" [src]="'https://openweathermap.org/img/wn/' + clima.icon + '.png'">
+    <p class="desc">{{ clima.description | titlecase}}</p>
+    }
+    <button (click)="navegarParaTelaDePesquisa()">Pesquisar</button>  
+  </div>
 </div>
