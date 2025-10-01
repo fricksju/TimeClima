@@ -45,5 +45,14 @@
                 border: none;
                 background: linear-gradient(135deg, #f9ed69 0%, #f08a5d 100%);
         }
+        .temp{
+            font-size: 3.25rem;
+            font-weight: 700;
+            color: #000000;
+            text-align: center;
+            margin: 4px 0 8px;
+            line-height: 1;
+            text-shadow: 0 4px 16px rgba(0,0,0,0.35);
+        }
       }
     }
