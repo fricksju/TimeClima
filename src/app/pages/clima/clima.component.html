@@ -21,10 +21,12 @@
           <span class="max">{{ dadosClima()?.main?.temp_max | number: '1.0-0' }}°C</span>
         </div>
       </div>
-      
+
       <button (click)="navegarParaTelaDePesquisa()">Pesquisar</button>
     } @else {
-      <app-loading-cidade></app-loading-cidade>
+      <app-loading-cidade mensagem ="Carregando temperatura"> </app-loading-cidade>
+
+   
     }
   </div>
 </div>

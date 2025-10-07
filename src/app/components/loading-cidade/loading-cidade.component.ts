@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-loading-cidade',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./loading-cidade.component.scss']
 })
 export class LoadingCidadeComponent implements OnInit {
-
+  mensagem = input('Carregando ...');
   constructor() { }
 
   ngOnInit() {
