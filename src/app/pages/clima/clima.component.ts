@@ -1,10 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { RouteConfigLoadEnd, Router } from '@angular/router';
-import { OpenWeatherService } from '../../service/open-weather.service';
 import { Weather, WeatherResponse } from '../../models/weather-response.model';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { catchError, of, OperatorFunction } from 'rxjs';
 import { DecimalPipe, TitleCasePipe } from '@angular/common'; 
+import { OpenWeatherService } from '../../services/open-weather.service';
 
 @Component({
   selector: 'app-clima',
