@@ -4,9 +4,9 @@
       {{dadosClima()?.name}}
     </app-nome-cidade>
 
-    <app-nome-cidade>
-      {{dadosClima()?.name}}
-    </app-nome-cidade>
+    <app-temp-cidade>
+      {{dadosClima()?.main?.temp | number: '1.0-0'}}°C
+    </app-temp-cidade>
     @if (dadosClima()){
       <!--<h1 class="city">{{ dadosClima()?.name}}</h1> -->
 

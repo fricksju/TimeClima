@@ -6,11 +6,12 @@ import { catchError, of, OperatorFunction } from 'rxjs';
 import { DecimalPipe, TitleCasePipe } from '@angular/common'; 
 import { OpenWeatherService } from '../../services/open-weather.service';
 import { NomeCidadeComponent } from "../../components/nome-cidade/nome-cidade.component";
+import { TempCidadeComponent } from "../../components/temp-cidade/temp-cidade.component";
 
 @Component({
   selector: 'app-clima',
   standalone: true,
-  imports: [DecimalPipe, TitleCasePipe, NomeCidadeComponent],
+  imports: [DecimalPipe, TitleCasePipe, NomeCidadeComponent, TempCidadeComponent],
   templateUrl: './clima.component.html',
   styleUrls: ['./clima.component.scss']
 })
