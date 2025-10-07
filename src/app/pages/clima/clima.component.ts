@@ -7,11 +7,12 @@ import { DecimalPipe, TitleCasePipe } from '@angular/common';
 import { OpenWeatherService } from '../../services/open-weather.service';
 import { NomeCidadeComponent } from "../../components/nome-cidade/nome-cidade.component";
 import { TempCidadeComponent } from "../../components/temp-cidade/temp-cidade.component";
+import { LoadingCidadeComponent } from "../../components/loading-cidade/loading-cidade.component";
 
 @Component({
   selector: 'app-clima',
   standalone: true,
-  imports: [DecimalPipe, TitleCasePipe, NomeCidadeComponent, TempCidadeComponent],
+  imports: [DecimalPipe, TitleCasePipe, NomeCidadeComponent, TempCidadeComponent, LoadingCidadeComponent],
   templateUrl: './clima.component.html',
   styleUrls: ['./clima.component.scss']
 })
