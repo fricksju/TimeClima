@@ -8,11 +8,12 @@ import { OpenWeatherService } from '../../services/open-weather.service';
 import { NomeCidadeComponent } from "../../components/nome-cidade/nome-cidade.component";
 import { TempCidadeComponent } from "../../components/temp-cidade/temp-cidade.component";
 import { LoadingCidadeComponent } from "../../components/loading-cidade/loading-cidade.component";
+import { ImgTituloComponent } from "../../components/img-titulo/img-titulo.component";
 
 @Component({
   selector: 'app-clima',
   standalone: true,
-  imports: [DecimalPipe, TitleCasePipe, NomeCidadeComponent, TempCidadeComponent, LoadingCidadeComponent],
+  imports: [DecimalPipe, NomeCidadeComponent, TempCidadeComponent, LoadingCidadeComponent, ImgTituloComponent],
   templateUrl: './clima.component.html',
   styleUrls: ['./clima.component.scss']
 })
