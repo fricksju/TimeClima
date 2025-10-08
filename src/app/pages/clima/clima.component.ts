@@ -9,11 +9,12 @@ import { NomeCidadeComponent } from "../../components/nome-cidade/nome-cidade.co
 import { TempCidadeComponent } from "../../components/temp-cidade/temp-cidade.component";
 import { LoadingCidadeComponent } from "../../components/loading-cidade/loading-cidade.component";
 import { ImgTituloComponent } from "../../components/img-titulo/img-titulo.component";
+import { MinMaxComponent } from "../../components/min-max/min-max.component";
 
 @Component({
   selector: 'app-clima',
   standalone: true,
-  imports: [DecimalPipe, NomeCidadeComponent, TempCidadeComponent, LoadingCidadeComponent, ImgTituloComponent],
+  imports: [DecimalPipe, NomeCidadeComponent, TempCidadeComponent, LoadingCidadeComponent, ImgTituloComponent, MinMaxComponent],
   templateUrl: './clima.component.html',
   styleUrls: ['./clima.component.scss']
 })

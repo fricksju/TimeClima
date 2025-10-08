@@ -15,10 +15,8 @@
       <app-img-titulo [clima]="dadosClima()!.weather[0]">
      
       </app-img-titulo>
-        <div class="minmax">
-          <span class="min">{{ dadosClima()?.main?.temp_min | number: '1.0-0' }}°C</span>
-          <span class="max">{{ dadosClima()?.main?.temp_max | number: '1.0-0' }}°C</span>
-        </div>
+
+      <app-min-max [main]="dadosClima()!.main"></app-min-max>
 
       <button (click)="navegarParaTelaDePesquisa()">Pesquisar</button>
     } @else {
