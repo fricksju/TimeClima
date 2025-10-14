@@ -17,8 +17,7 @@
       </app-img-titulo>
 
       <app-min-max [main]="dadosClima()!.main"></app-min-max>
-
-      <button (click)="navegarParaTelaDePesquisa()">Pesquisar</button>
+      <app-button (onClick)="navegarParaTelaDePesquisa()">Pesquisar</app-button>
     } @else {
       <app-loading-cidade mensagem ="Carregandotemperatura"> </app-loading-cidade>
 
