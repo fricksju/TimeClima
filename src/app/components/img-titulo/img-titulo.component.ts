@@ -1,20 +1,16 @@
+import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
+import { Weather } from '../../models/wheater-response.model';
 import { TitleCasePipe } from '@angular/common';
-import { Component, input, Input, OnInit } from '@angular/core';
-import { Weather } from '../../models/weather-response.model';
 
 @Component({
   selector: 'app-img-titulo',
   standalone: true,
   imports: [TitleCasePipe],
   templateUrl: './img-titulo.component.html',
-  styleUrls: ['./img-titulo.component.scss']
+  styleUrls: ['./img-titulo.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ImgTituloComponent implements OnInit {
- clima= input<Weather | null>(null);
+export class ImgTituloComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  clima = input<Weather | null>(null);
 }
